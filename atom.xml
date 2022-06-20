@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://duanxinyua.github.io</id>
+    <title>六个核桃</title>
+    <updated>2022-06-20T01:23:31.604Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://duanxinyua.github.io"/>
+    <link rel="self" href="https://duanxinyua.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://duanxinyua.github.io/images/avatar.png</logo>
+    <icon>https://duanxinyua.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, 六个核桃</rights>
+    <entry>
+        <title type="html"><![CDATA[联通大王卡免流过40]]></title>
+        <id>https://duanxinyua.github.io/post/lian-tong-da-wang-qia/</id>
+        <link href="https://duanxinyua.github.io/post/lian-tong-da-wang-qia/">
+        </link>
+        <updated>2022-06-17T00:58:42.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>机   型     荣耀30pro+
+系   统     鸿蒙2.0
+套   餐     腾讯大王卡
+混   淆     csgl.wo186.tv
+
+1、下载软件        TingProxy（自行百度）
+2、修改接入点     3gwap（配置如下，其余选项的默认）
+    名称        3gwap
+    apn         3gwap
+    代理        10.0.0.172
+    端口        80
+    MCC         460
+    MNC         01
+3、复制模式
+    listen_port=65080;
+    worker_proc=0;
+    daemon=on;
+    uid=3004;
+    mode=wap;
+    http_ip=10.0.0.172;
+    http_port=80;
+    http_del=&quot;Host,X-Online-Host&quot;;
+    http_first=&quot;[M] [U] [V]\r\nX-Online-Host:[H]:Host:csgl.wo186.tv\r\nHost:csgl.wo186.tv\r\n&quot;;
+    https_connect=on;
+    https_ip=10.0.0.172;
+    https_port=80;
+    https_del=&quot;Host,X-Online-Host&quot;;
+    https_first=&quot;CONNECT [H]:Host:csgl.wo186.tv [V]\r\nHost:csgl.wo186.tv\r\n&quot;;
+    dns_tcp=http;
+    dns_listen_port=65053;
+    dns_url=&quot;119.29.29.29&quot;;
+
+4、复制上面的混淆到TingProxy
+5、TingProxy软件右上角点击三个点，选择黏贴配置，输入名称（随便写）后，点击确定
+6、选择配置文件（前面的圈为实心蓝色）
+7、TingProxy软件左上角点击三个横线，选择高级配置，打开自动测网和HTTP/S转发DNS，打开后返回
+8、打开右上角的开关
+9、教程结束！
+
+
+
+以下说明
+1.免流走的是手机电视
+2.最后一步打开会提示HTTP和HTTPS的联网状态。
+3.5G和4G这边测试都是免流的（手机卡开通了SA）
+4.不免请自行去抓取混淆
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Stranger]]></title>
+        <id>https://duanxinyua.github.io/post/hello-stranger/</id>
+        <link href="https://duanxinyua.github.io/post/hello-stranger/">
+        </link>
+        <updated>2022-06-16T02:45:27.000Z</updated>
+        <content type="html"><![CDATA[<p>👏  welcome to come here！<br>
+✍️  这里是一个工作记录博客。用来记录我的的生活、心情、知识、笔记、创意... ...</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
