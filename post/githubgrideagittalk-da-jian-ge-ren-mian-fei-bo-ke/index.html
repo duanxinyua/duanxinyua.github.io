@@ -1,0 +1,246 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GitHub+Gridea+GitTalk 搭建个人免费博客 | Six walnuts</title>
+<link rel="shortcut icon" href="https://duanxinyua.github.io/favicon.ico?v=1727144200427">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://duanxinyua.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="GitHub+Gridea+GitTalk 搭建个人免费博客 | Six walnuts - Atom Feed" href="https://duanxinyua.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="官方文档链接:https://open.gridea.dev/docs
+这里涵盖了Gridea遇到的多数问题：https://open.gridea.dev/faq/
+这里涵盖了GitTalk 遇到的多数问题：https://github...." />
+    <meta name="keywords" content="Gridea" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://duanxinyua.github.io">
+  <img class="avatar" src="https://duanxinyua.github.io/images/avatar.png?v=1727144200427" alt="">
+  </a>
+  <h1 class="site-title">
+    Six walnuts
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/duanxinyua" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+        <a href="https://x.com/vt4pT5J9CIB9uhC" target="_blank">
+          <i class="ri-twitter-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              GitHub+Gridea+GitTalk 搭建个人免费博客
+            </h2>
+            <div class="post-info">
+              <span>
+                2024-09-23
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://duanxinyua.github.io/tag/dKCrCQzIB/" class="post-tag">
+                  # Gridea
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://duanxinyua.github.io/post-images/githubgrideagittalk-da-jian-ge-ren-mian-fei-bo-ke.jpg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p><a href="https://open.gridea.dev/docs">官方文档链接:https://open.gridea.dev/docs</a><br>
+<a href="https://open.gridea.dev/faq/">这里涵盖了Gridea遇到的多数问题：https://open.gridea.dev/faq/</a><br>
+<a href="https://github.com/gitalk/gitalk/issues">这里涵盖了GitTalk 遇到的多数问题：https://github.com/gitalk/gitalk/issues</a><br>
+必要条件：下载安装Gridea，有GitHub账号，相信你能看到这里证明是具备账号的。</p>
+<!-- more -->
+<ol>
+<li>
+<p>仓库创建<br>
+首先，需要创建一个仓库，建议仓库为 http://username.github.io。根据官方文档， GitHub 会默认将名称符合要求的仓库设置成 GitHub Pages 可访问类型。例如我的用户名是 duanxinyua，所以仓库名就是duanxinyua.github.io。如果遇到创建仓库的时候并未自动启用 GitHub Pages，遇到这种情况手动开启即可。仓库名设置为[用户名.github.io] ，如下图所示，已经设置过了，所以显示重复，输入仓库名称点击右下角创建仓库。<br>
+<img src="https://duanxinyua.github.io/post-images/1727073806721.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>开启GitHub Pages和自定义域名<br>
+创建仓库的时候名称符合会自动启用，没有的话点击仓库的设置（Settings），如图点击页面（Pages），列表第一项开启即可。如果有自定义域名填写到设置中，如图的Custom domain，记得在你所在的域名服务商做域名解析，我这里是www通过cname解析到仓库名：duanxinyua.github.io。<br>
+<img src="https://duanxinyua.github.io/post-images/1727074391917.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>在设置(Setting)界面将部署的页面设置为main，之后要填写到Gridea配置中，记得保存！！！如下图所示。（到此仓库创建完成）<br>
+<img src="https://duanxinyua.github.io/post-images/1727074562091.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>创建用于Gridea连接的Token<br>
+在个人Setting界面创建用于Gridea连接的Token，点击头像，选择设置（Settings），点击开发人员设置（Developer settings），个人访问令牌（Personal access tokens），令牌（Tokens (classic)），生成新令牌（Generate new token（classic）），repo权限即可，别的权限不要防止泄露，记得保存好Token，关闭页面后就看不见了。<br>
+<img src="https://duanxinyua.github.io/post-images/1727075398095.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>配置Gridea<br>
+<a href="https://open.gridea.dev/#started">下载Gridea：https://open.gridea.dev/#started</a>，根据自己的系统选择安装，<br>
+软件界面远程设置一下，按照下图设置自己的仓库就行。<br>
+<img src="https://duanxinyua.github.io/post-images/1727075930314.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>配置GitTalk（评论）<br>
+跟上面Token类似，OAuth应用程序（OAuth Apps），生成一个用来授予GitTalk的ID和secret，基础仓库记得加上 https://，结尾也要加上/。如果你使用的是自定义域名，这里填写你的自定义域名。<br>
+<img src="https://duanxinyua.github.io/post-images/1727076461076.jpg" alt="" loading="lazy"><br>
+然后将ID和secret上传到Gridea软件。<br>
+<img src="https://duanxinyua.github.io/post-images/1727076669744.jpg" alt="" loading="lazy"></p>
+</li>
+</ol>
+<p>到这里搭建完成。</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://duanxinyua.github.io/post/Hello-Walnuts/">
+              <h3 class="post-title">
+                Hello 欢迎
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'Ov23liPXqSWVLxTzQ8k2',
+    clientSecret: 'e3a09f84e51c80befce1740c7dd298af6d6ac4d7',
+    repo: 'duanxinyua.github.io',
+    owner: 'duanxinyua',
+    admin: ['duanxinyua'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/duanxinyua" target="_blank">Six walnuts</a>
+  <a class="rss" href="https://duanxinyua.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
