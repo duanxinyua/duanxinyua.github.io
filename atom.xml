@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://duanxinyua.github.io</id>
+    <title>Six walnuts</title>
+    <updated>2024-11-19T09:10:13.913Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://duanxinyua.github.io"/>
+    <link rel="self" href="https://duanxinyua.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://duanxinyua.github.io/images/avatar.png</logo>
+    <icon>https://duanxinyua.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, Six walnuts</rights>
+    <entry>
+        <title type="html"><![CDATA[GitHub+Gridea+GitTalk 搭建个人免费博客]]></title>
+        <id>https://duanxinyua.github.io/post/githubgrideagittalk-da-jian-ge-ren-mian-fei-bo-ke/</id>
+        <link href="https://duanxinyua.github.io/post/githubgrideagittalk-da-jian-ge-ren-mian-fei-bo-ke/">
+        </link>
+        <updated>2024-09-23T02:53:29.000Z</updated>
+        <summary type="html"><![CDATA[<p><a href="https://open.gridea.dev/docs"><strong>官方文档链接</strong>: https://open.gridea.dev/docs</a><br>
+<a href="https://open.gridea.dev/faq/"><strong>Gridea常见问题解答</strong>: https://open.gridea.dev/faq/</a><br>
+<a href="https://github.com/gitalk/gitalk/issues"><strong>GitTalk常见问题解答</strong>: https://github.com/gitalk/gitalk/issues</a></p>
+<p>必要条件：下载安装 Gridea，有 GitHub 账号。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p><a href="https://open.gridea.dev/docs"><strong>官方文档链接</strong>: https://open.gridea.dev/docs</a><br>
+<a href="https://open.gridea.dev/faq/"><strong>Gridea常见问题解答</strong>: https://open.gridea.dev/faq/</a><br>
+<a href="https://github.com/gitalk/gitalk/issues"><strong>GitTalk常见问题解答</strong>: https://github.com/gitalk/gitalk/issues</a></p>
+<p>必要条件：下载安装 Gridea，有 GitHub 账号。</p>
+<!-- more -->  
+<hr>
+<h1 id="1-仓库创建">1. 仓库创建</h1>
+<p>首先，需要创建一个仓库，建议仓库名为 <code>http://username.github.io</code>。根据官方文档，GitHub 会默认将名称符合要求的仓库设置为 GitHub Pages 可访问类型。</p>
+<p>例如我的用户名是 <code>duanxinyua</code>，所以仓库名就是 <code>duanxinyua.github.io</code>。如果创建仓库时未自动启用 GitHub Pages，可以手动开启。</p>
+<p>仓库名设置为 <code>[用户名.github.io]</code>。如下图所示，由于已经设置过，显示为重复，输入仓库名称后点击右下角创建仓库。</p>
+<figure data-type="image" tabindex="1"><img src="https://cftc.hetao.pw/file/1732003842156_1727073806721.jpg" alt="仓库创建示例" loading="lazy"></figure>
+<hr>
+<h1 id="2-开启-github-pages-和自定义域名">2. 开启 GitHub Pages 和自定义域名</h1>
+<p>创建仓库时，若名称符合要求会自动启用 GitHub Pages，否则需要手动开启：</p>
+<ol>
+<li>点击仓库的 <strong>Settings</strong>（设置）。</li>
+<li>在页面的 <strong>Pages</strong> 部分，选择要部署的分支并启用。</li>
+</ol>
+<p>若无自定义域名，可忽略此步骤；若有自定义域名：</p>
+<ol>
+<li>在 <strong>Custom domain</strong> 中填写域名。</li>
+<li>到域名服务商配置 CNAME 解析，将域名指向仓库名（如 <code>duanxinyua.github.io</code>）。</li>
+</ol>
+<figure data-type="image" tabindex="2"><img src="https://cftc.hetao.pw/file/1732003878487_1727074391917.jpg" alt="自定义域名设置" loading="lazy"></figure>
+<hr>
+<h1 id="3-设置">3. 设置</h1>
+<p>在 <strong>Settings</strong>（设置）界面，将部署的页面分支设置为 <code>main</code>。</p>
+<p>之后需要将此信息填写到 Gridea 配置中，并记得保存。如下图所示，到此仓库创建完成。</p>
+<figure data-type="image" tabindex="3"><img src="https://cftc.hetao.pw/file/1732003910637_1727074562091.jpg" alt="分支设置示例" loading="lazy"></figure>
+<hr>
+<h1 id="4-创建用于-gridea-连接的-token">4. 创建用于 Gridea 连接的 Token</h1>
+<p>在 GitHub 的 <strong>Settings</strong> 中创建一个 Token：</p>
+<ol>
+<li>点击头像，选择 <strong>Settings</strong>（设置）。</li>
+<li>进入 <strong>Developer settings</strong> &gt; <strong>Personal access tokens</strong> &gt; <strong>Tokens (classic)</strong>。</li>
+<li>点击 <strong>Generate new token (classic)</strong>，勾选 <code>repo</code> 权限即可（其他权限不要选，以防泄露）。</li>
+</ol>
+<p><strong>注意</strong>：生成的 Token 需要妥善保存，关闭页面后无法再次查看。</p>
+<figure data-type="image" tabindex="4"><img src="https://cftc.hetao.pw/file/1732004131151_1727075398095.jpg" alt="Token 创建示例" loading="lazy"></figure>
+<hr>
+<h1 id="5-配置-gridea">5. 配置 Gridea</h1>
+<p><a href="https://open.gridea.dev/#started">下载 Gridea</a> 并安装，根据系统选择对应版本。</p>
+<p>在软件的 <strong>远程设置</strong> 中，填写你的仓库信息，具体配置如下图所示：</p>
+<figure data-type="image" tabindex="5"><img src="https://cftc.hetao.pw/file/1732004151188_1727075930314.jpg" alt="Gridea 配置示例" loading="lazy"></figure>
+<hr>
+<h1 id="6-配置-gittalk评论">6. 配置 GitTalk（评论）</h1>
+<p>配置 GitTalk 的步骤如下：</p>
+<ol>
+<li>在 <strong>OAuth Apps</strong> 中生成用于 GitTalk 的 ID 和 Secret。</li>
+<li>基础仓库需填写完整路径，格式为 <code>https://your-repo-name.github.io/</code>。<br>
+若使用自定义域名，则填写你的自定义域名。</li>
+</ol>
+<p>将生成的 ID 和 Secret 上传到 Gridea 中，如下图所示：</p>
+<p><img src="https://cftc.hetao.pw/file/1732004196694_1727076461076.jpg" alt="GitTalk OAuth 设置" loading="lazy"><br>
+<img src="https://cftc.hetao.pw/file/1732004219924_1727076669744.jpg" alt="GitTalk 配置到 Gridea" loading="lazy"></p>
+<hr>
+<p>到这里，Gridea 的搭建和配置完成！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello 欢迎]]></title>
+        <id>https://duanxinyua.github.io/post/Hello-Walnuts/</id>
+        <link href="https://duanxinyua.github.io/post/Hello-Walnuts/">
+        </link>
+        <updated>2024-05-30T06:25:42.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎来到核桃的小站！ ！<br>
+✍️  这里会记录日常生活的零碎杂事和工作中的杂七杂八。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎来到核桃的小站！ ！<br>
+✍️  这里会记录日常生活的零碎杂事和工作中的杂七杂八。</p>
+<!-- more -->
+<p><a href="https://github.com/duanxinyua">Github</a></p>
+<!-- more -->
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>

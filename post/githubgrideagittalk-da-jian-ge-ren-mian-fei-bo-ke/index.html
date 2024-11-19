@@ -1,0 +1,271 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GitHub+Gridea+GitTalk 搭建个人免费博客 | Six walnuts</title>
+<link rel="shortcut icon" href="https://duanxinyua.github.io/favicon.ico?v=1732007290197">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://duanxinyua.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="GitHub+Gridea+GitTalk 搭建个人免费博客 | Six walnuts - Atom Feed" href="https://duanxinyua.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="官方文档链接: https://open.gridea.dev/docs
+Gridea常见问题解答: https://open.gridea.dev/faq/
+GitTalk常见问题解答: https://github.com/gitalk..." />
+    <meta name="keywords" content="Gridea" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://duanxinyua.github.io">
+  <img class="avatar" src="https://duanxinyua.github.io/images/avatar.png?v=1732007290197" alt="">
+  </a>
+  <h1 class="site-title">
+    Six walnuts
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/duanxinyua" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+        <a href="https://x.com/vt4pT5J9CIB9uhC" target="_blank">
+          <i class="ri-twitter-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              GitHub+Gridea+GitTalk 搭建个人免费博客
+            </h2>
+            <div class="post-info">
+              <span>
+                2024-09-23
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://duanxinyua.github.io/tag/dKCrCQzIB/" class="post-tag">
+                  # Gridea
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://duanxinyua.github.io/post-images/githubgrideagittalk-da-jian-ge-ren-mian-fei-bo-ke.jpg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p><a href="https://open.gridea.dev/docs"><strong>官方文档链接</strong>: https://open.gridea.dev/docs</a><br>
+<a href="https://open.gridea.dev/faq/"><strong>Gridea常见问题解答</strong>: https://open.gridea.dev/faq/</a><br>
+<a href="https://github.com/gitalk/gitalk/issues"><strong>GitTalk常见问题解答</strong>: https://github.com/gitalk/gitalk/issues</a></p>
+<p>必要条件：下载安装 Gridea，有 GitHub 账号。</p>
+<!-- more -->  
+<hr>
+<h1 id="1-仓库创建">1. 仓库创建</h1>
+<p>首先，需要创建一个仓库，建议仓库名为 <code>http://username.github.io</code>。根据官方文档，GitHub 会默认将名称符合要求的仓库设置为 GitHub Pages 可访问类型。</p>
+<p>例如我的用户名是 <code>duanxinyua</code>，所以仓库名就是 <code>duanxinyua.github.io</code>。如果创建仓库时未自动启用 GitHub Pages，可以手动开启。</p>
+<p>仓库名设置为 <code>[用户名.github.io]</code>。如下图所示，由于已经设置过，显示为重复，输入仓库名称后点击右下角创建仓库。</p>
+<figure data-type="image" tabindex="1"><img src="https://cftc.hetao.pw/file/1732003842156_1727073806721.jpg" alt="仓库创建示例" loading="lazy"></figure>
+<hr>
+<h1 id="2-开启-github-pages-和自定义域名">2. 开启 GitHub Pages 和自定义域名</h1>
+<p>创建仓库时，若名称符合要求会自动启用 GitHub Pages，否则需要手动开启：</p>
+<ol>
+<li>点击仓库的 <strong>Settings</strong>（设置）。</li>
+<li>在页面的 <strong>Pages</strong> 部分，选择要部署的分支并启用。</li>
+</ol>
+<p>若无自定义域名，可忽略此步骤；若有自定义域名：</p>
+<ol>
+<li>在 <strong>Custom domain</strong> 中填写域名。</li>
+<li>到域名服务商配置 CNAME 解析，将域名指向仓库名（如 <code>duanxinyua.github.io</code>）。</li>
+</ol>
+<figure data-type="image" tabindex="2"><img src="https://cftc.hetao.pw/file/1732003878487_1727074391917.jpg" alt="自定义域名设置" loading="lazy"></figure>
+<hr>
+<h1 id="3-设置">3. 设置</h1>
+<p>在 <strong>Settings</strong>（设置）界面，将部署的页面分支设置为 <code>main</code>。</p>
+<p>之后需要将此信息填写到 Gridea 配置中，并记得保存。如下图所示，到此仓库创建完成。</p>
+<figure data-type="image" tabindex="3"><img src="https://cftc.hetao.pw/file/1732003910637_1727074562091.jpg" alt="分支设置示例" loading="lazy"></figure>
+<hr>
+<h1 id="4-创建用于-gridea-连接的-token">4. 创建用于 Gridea 连接的 Token</h1>
+<p>在 GitHub 的 <strong>Settings</strong> 中创建一个 Token：</p>
+<ol>
+<li>点击头像，选择 <strong>Settings</strong>（设置）。</li>
+<li>进入 <strong>Developer settings</strong> &gt; <strong>Personal access tokens</strong> &gt; <strong>Tokens (classic)</strong>。</li>
+<li>点击 <strong>Generate new token (classic)</strong>，勾选 <code>repo</code> 权限即可（其他权限不要选，以防泄露）。</li>
+</ol>
+<p><strong>注意</strong>：生成的 Token 需要妥善保存，关闭页面后无法再次查看。</p>
+<figure data-type="image" tabindex="4"><img src="https://cftc.hetao.pw/file/1732004131151_1727075398095.jpg" alt="Token 创建示例" loading="lazy"></figure>
+<hr>
+<h1 id="5-配置-gridea">5. 配置 Gridea</h1>
+<p><a href="https://open.gridea.dev/#started">下载 Gridea</a> 并安装，根据系统选择对应版本。</p>
+<p>在软件的 <strong>远程设置</strong> 中，填写你的仓库信息，具体配置如下图所示：</p>
+<figure data-type="image" tabindex="5"><img src="https://cftc.hetao.pw/file/1732004151188_1727075930314.jpg" alt="Gridea 配置示例" loading="lazy"></figure>
+<hr>
+<h1 id="6-配置-gittalk评论">6. 配置 GitTalk（评论）</h1>
+<p>配置 GitTalk 的步骤如下：</p>
+<ol>
+<li>在 <strong>OAuth Apps</strong> 中生成用于 GitTalk 的 ID 和 Secret。</li>
+<li>基础仓库需填写完整路径，格式为 <code>https://your-repo-name.github.io/</code>。<br>
+若使用自定义域名，则填写你的自定义域名。</li>
+</ol>
+<p>将生成的 ID 和 Secret 上传到 Gridea 中，如下图所示：</p>
+<p><img src="https://cftc.hetao.pw/file/1732004196694_1727076461076.jpg" alt="GitTalk OAuth 设置" loading="lazy"><br>
+<img src="https://cftc.hetao.pw/file/1732004219924_1727076669744.jpg" alt="GitTalk 配置到 Gridea" loading="lazy"></p>
+<hr>
+<p>到这里，Gridea 的搭建和配置完成！</p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#1-%E4%BB%93%E5%BA%93%E5%88%9B%E5%BB%BA">1. 仓库创建</a></li>
+<li><a href="#2-%E5%BC%80%E5%90%AF-github-pages-%E5%92%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D">2. 开启 GitHub Pages 和自定义域名</a></li>
+<li><a href="#3-%E8%AE%BE%E7%BD%AE">3. 设置</a></li>
+<li><a href="#4-%E5%88%9B%E5%BB%BA%E7%94%A8%E4%BA%8E-gridea-%E8%BF%9E%E6%8E%A5%E7%9A%84-token">4. 创建用于 Gridea 连接的 Token</a></li>
+<li><a href="#5-%E9%85%8D%E7%BD%AE-gridea">5. 配置 Gridea</a></li>
+<li><a href="#6-%E9%85%8D%E7%BD%AE-gittalk%E8%AF%84%E8%AE%BA">6. 配置 GitTalk（评论）</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://duanxinyua.github.io/post/Hello-Walnuts/">
+              <h3 class="post-title">
+                Hello 欢迎
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'Ov23liPXqSWVLxTzQ8k2',
+    clientSecret: 'e3a09f84e51c80befce1740c7dd298af6d6ac4d7',
+    repo: 'duanxinyua.github.io',
+    owner: 'duanxinyua',
+    admin: ['duanxinyua'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/duanxinyua" target="_blank">Six walnuts</a>
+  <a class="rss" href="https://duanxinyua.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
